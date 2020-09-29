@@ -1,0 +1,5 @@
+<app-header
+  (filterChanged)="onFilterChanged($event)"
+  [filters]="filters"
+></app-header>
+<app-homes [homes$]="filteredHomes$"></app-homes>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "title": "IJ View Apartment",
+    "image": "assets/amsterdam.jpg",
+    "location": "Amsterdam",
+    "price": "325",
+    "balcony": true,
+    "parking": false
+  },
+  {
+    "id": 1,
+    "title": "Stylish Apartment",
+    "image": "assets/leeuwarden.jpg",
+    "location": "Leeuwarden",
+    "price": "125",
+    "balcony": false,
+    "parking": true
+  },
+  {
+    "id": 2,
+    "title": "Canal Apartment",
+    "image": "assets/utrecht.jpg",
+    "location": "Utrecht",
+    "price": "225",
+    "balcony": true,
+    "parking": false
+  },
+  {
+    "id": 3,
+    "title": "Skyline View Apartment",
+    "image": "assets/rotterdam.jpg",
+    "location": "Rotterdam",
+    "price": "275",
+    "balcony": true,
+    "parking": true
+  }
+]
