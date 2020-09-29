@@ -1,11 +1,11 @@
-import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { MockComponent } from './utils/mock-component';
-import { DataService } from './services/data.service';
-import { of } from 'rxjs';
+import { TestBed, ComponentFixture } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { MockComponent } from "./utils/mock-component";
+import { DataService } from "./services/data.service";
+import { of } from "rxjs";
 
-describe('AppComponent', () => {
+describe("AppComponent", () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let dataService: DataService;
@@ -14,8 +14,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        MockComponent({ selector: 'app-header' }),
-        MockComponent({ selector: 'app-homes' }),
+        MockComponent({ selector: "app-header" }),
+        MockComponent({ selector: "app-homes" }),
       ],
       imports: [HttpClientTestingModule],
     }).compileComponents();
@@ -27,12 +27,13 @@ describe('AppComponent', () => {
     dataService = TestBed.get(DataService);
   });
 
-  it('should create the app', () => {
+  it("should create the app", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call get homes on init', () => {
-    //TODO:
-    expect(false).toBe(true);
+  it("should get homes on init", () => {
+    spyOn(dataService, "getHomes$").and.returnValue(of([]));
+    component.ngOnInit();
+    expect(dataService.getHomes$).toHaveBeenCalled();
   });
 });
